@@ -3,7 +3,6 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 interface TodoItem {
   id: string;
   text: string;
-  done: boolean;
 }
 
 interface TodoListState {

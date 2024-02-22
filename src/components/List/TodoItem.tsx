@@ -8,10 +8,10 @@ const TodoItem = () => {
   const { deleteTodoHandler } = useTodo();
 
   return (
-    <section>
-      <ul>
+    <section className="w-full">
+      <ul className="flex flex-col gap-5">
         {todos.map(todo => (
-          <li key={todo.id}>
+          <li className="flex justify-between border-solid border-2 border-slate-500 rounded-md p-2" key={todo.id}>
             <span>{todo.text}</span>
             <Button type="button" onClick={() => deleteTodoHandler(todo.id)}>
               Delete

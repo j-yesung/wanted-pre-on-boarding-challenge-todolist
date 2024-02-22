@@ -8,7 +8,7 @@ const Button = (props: ButtonProps) => {
   const { type, children, onClick } = props;
 
   return (
-    <button type={type} onClick={onClick}>
+    <button className="border-solid border-2 border-slate-500 rounded-md p-2" type={type} onClick={onClick}>
       {children}
     </button>
   );
