@@ -1,7 +1,13 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
+interface TodoItem {
+  id: string;
+  text: string;
+  done: boolean;
+}
+
 interface TodoListState {
-  todos: string[];
+  todos: TodoItem[];
 }
 
 const initialState: TodoListState = {
@@ -9,19 +15,17 @@ const initialState: TodoListState = {
 };
 
 export const listSlice = createSlice({
-  name: 'todoList',
+  name: 'todos',
   initialState,
   reducers: {
-    addTodo: (state, action: PayloadAction<string>) => {
-      console.log('action: ', action);
-      // logic
+    addTodo: (state, action: PayloadAction<TodoItem>) => {
       state.todos.push(action.payload);
     },
-    removeTodo: (state, action) => {
-      // logic
+    deleteTodo: (state, action: PayloadAction<string>) => {
+      state.todos = state.todos.filter(todo => todo.id !== action.payload);
     },
   },
 });
 
-export const { addTodo, removeTodo } = listSlice.actions;
+export const { addTodo, deleteTodo } = listSlice.actions;
 export default listSlice.reducer;

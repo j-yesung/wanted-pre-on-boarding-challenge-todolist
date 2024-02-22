@@ -1,9 +1,13 @@
-function App() {
+import { Provider } from 'react-redux';
+import TodoList from './components/List/TodoList';
+import { store } from './store/config/store';
+
+const App = () => {
   return (
-    <div>
-      <div></div>
-    </div>
+    <Provider store={store}>
+      <TodoList />
+    </Provider>
   );
-}
+};
 
 export default App;
