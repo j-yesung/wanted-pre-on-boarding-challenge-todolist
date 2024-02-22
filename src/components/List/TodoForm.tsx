@@ -1,6 +1,6 @@
-import { useInput } from '../hooks/useInput';
+import { useInput } from '../../hooks/useInput';
 import Button from '../Common/Button';
-import { useTodo } from '../hooks/useTodo';
+import { useTodo } from '../../hooks/useTodo';
 import { useRef } from 'react';
 
 const TodoForm = () => {

@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/config/store';
-import { useTodo } from '../hooks/useTodo';
+import { useTodo } from '../../hooks/useTodo';
 import Button from '../Common/Button';
 
 const TodoItem = () => {

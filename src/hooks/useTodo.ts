@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addTodo, deleteTodo } from '../../store/modules/listSlice';
+import { addTodo, deleteTodo } from '../store/modules/listSlice';
 import shortid from 'shortid';
 import { RefObject } from 'react';
 
